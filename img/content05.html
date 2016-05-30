@@ -1,0 +1,366 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Michelle Netto Web Designer and Front-End Developer </title>
+  <link href="main.css" rel="stylesheet" type="text/css">
+  <link href="css/inner.css" rel="stylesheet" type="text/css">
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+  <link href="fontawesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="lightbox/dist/css/lightbox.css">
+  <link rel="icon" type="image/gif" href="img/fav.png" />
+  <script>
+    $(document).ready(function() {
+
+      loadGallery(true, 'a.thumbnail');
+
+      //This function disables buttons when needed
+      function disableButtons(counter_max, counter_current) {
+        $('#show-previous-image, #show-next-image').show();
+        if (counter_max == counter_current) {
+          $('#show-next-image').hide();
+        } else if (counter_current == 1) {
+          $('#show-previous-image').hide();
+        }
+      }
+
+      /**
+       *
+       * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
+       * @param setClickAttr  Sets the attribute for the click handler.
+       */
+
+      function loadGallery(setIDs, setClickAttr) {
+        var current_image,
+          selector,
+          counter = 0;
+
+        $('#show-next-image, #show-previous-image').click(function() {
+          if ($(this).attr('id') == 'show-previous-image') {
+            current_image--;
+          } else {
+            current_image++;
+          }
+
+          selector = $('[data-image-id="' + current_image + '"]');
+          updateGallery(selector);
+        });
+
+        function updateGallery(selector) {
+          var $sel = selector;
+          current_image = $sel.data('image-id');
+          $('#image-gallery-caption').text($sel.data('caption'));
+          $('#image-gallery-title').text($sel.data('title'));
+          $('#image-gallery-image').attr('src', $sel.data('image'));
+          disableButtons(counter, $sel.data('image-id'));
+        }
+
+        if (setIDs == true) {
+          $('[data-image-id]').each(function() {
+            counter++;
+            $(this).attr('data-image-id', counter);
+          });
+        }
+        $(setClickAttr).on('click', function() {
+          updateGallery($(this));
+        });
+      }
+    });
+  </script>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+  <div class="main-wrap">
+    <!-- Start Header abd navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#page-top">
+            <img src="img/logot.png" alt="Michelle's Web Designer & Front-end Developer" class="navbar-brand img-responsive page-scroll" title="Michelle Netto's Web Designer & Front-end Developer" accesskey="t">
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html" accesskey="1" alt="Home" title="Home">Home</a></li>
+            <li><a href="resume.html" accesskey="r" alt="Resume" title="Resume">Resume</a></li>
+            <li class="dropdown active" alt="Portfolio" title="Portfolio">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" tabindex="0">Portfolio <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="design.html" accesskey="d" alt="Design" title="Design">Design</a></li>
+                <li><a href="video.html" accesskey="v" alt="Video" title="Video">Video</a></li>
+                <li class="active"><a href="webp.html" accesskey="s" alt="Social Media & Web Marketing" title="Social Media & Web Marketing">Social Media & Web Marketing</a></li>
+                <li><a href="misc.html" accesskey="m" alt="Miscellaneous" title="Miscellaneous">Miscellaneous</a></li>
+              </ul>
+            </li>
+            <li><a href="contact.html" accesskey="4" alt="Contact Me" title="Contact Me">Contact Me</a></li>
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- /. end Header abd navbar -->
+    <div id="content">
+      <div class="jumbotron top">
+        <div class="container">
+          <img src="img/headerj03.png" class="img-responsive mid hidden-xs hidden-sm">
+          <img src="img/headerj05.png" class="img-responsive small visible-xs visible-sm hidden-lg">
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-xs-12">
+
+            <div id="resphoto-header" class="text-center">
+
+              <div id="inphoto">
+                <img src="img/smtop.png">
+              </div>
+              <div id="inner-header">
+                <h4><a class="page-scroll" href="#websites">Content Marketing</a> | <a class="page-scroll" href="#socmedia">Social Media</a></h4>
+                <section id="websites">
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container -->
+
+    </div>
+    <!-- /.content -->
+
+    <div class="container">
+      <div class="col-lg-12">
+        <h1 class="topper">Content Marketing</h1>
+        <h5 class="topper"> My latest position required to learn many skills to accommodate the eCommerce and online marketing side of web development. I have created banners, e-mail newsletters, customer resources and much more.</h5>
+
+        <div class="well">
+
+          <div class="row lb-container">
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <a href="grx/soc02.jpg" data-lightbox="content_marketing" data-title="<a href='http://eepurl.com/bUiM-b' target='blank'> RMA Electronics, Inc. 30th Anniversary Newsletter</a>">
+                <img src="grx/soc02.jpg" alt="image-1" />
+              </a>
+              <h5 class="newl"><a href="http://eepurl.com/bUiM-b" target="_blank">View Newsletter</a></h5>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <a href="grx/soc04.jpg" data-lightbox="content_marketing" data-title="Facebook Banner Ad">
+                <img src="grx/soc04.jpg" alt="image-2" />
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <a href="grx/soc05.jpg" data-lightbox="content_marketing" data-title="Mako Ad for Newsletter">
+                <img src="grx/soc05.jpg" alt="image-2" />
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <a href="grx/soc06.jpg" data-lightbox="content_marketing" data-title="Info Ad for Social Media">
+                <img src="grx/soc06.jpg" alt="image-2" />
+              </a>
+            </div>
+          </div>
+          <div class="row lb-container">
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <a href="grx/soc03.jpg" data-lightbox="content_marketing" data-title="Kowa Ad for social media">
+                <img src="grx/soc03.jpg" alt="image-2" />
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <a href="grx/soc01.jpg" data-lightbox="content_marketing" data-title="Banner Ad I created that is on RMA Electronic's Website">
+                <img class="lb-thumb" src="grx/soc01.jpg" alt="Banner Ad" />
+              </a>
+            </div>
+          </div>
+          <br>
+          <br>
+        </div>
+        <img class="center-block" src="img/msoon.png">
+        <br>
+        <br>
+        <h4><a class="page-scroll" href="#page-top">Back to top!</a></h4>
+      </div>
+    </div>
+    </section>
+    <section id="socmedia">
+      <hr class="drop">
+      <!-- /.container -->
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="topper">Social Media</h1>
+
+          <h5 class="topper">I have been involved with several with the social media aspect of several projects both personal and professional. Below are some hightlights.
+          </h5>
+          <div class="container">
+            <div class="row well">
+
+              <div class="col-md-6 content-title">
+                <h2>Puella Magi Madoka Magica News</h2>
+                <a href="http://madokamagicanews.com/" title="Puella Magi Madoka Magica News" target="_blank">
+                  <small>madokamagicanews.com <i class="fa fa-external-link"></i></small>
+                </a>
+                <p>Madoka News is a tumblr I run and maintain. It gained popularity when I became the first North American outlet to post translate the animation studio’s official announcement of a new character.</p>
+              </div>
+              <div class="col-md-6 mvid">
+                <img class="img-responsive pull-right" src="img/mmnews.jpg" alt="Website Mockups">
+                <small class="pull-right">© Magica Quartet/Aniplex, Madoka Partners, MBS</small>
+              </div>
+              <div>
+                <center>
+                  <img src="img/mmnstats.png">
+                  <br>
+                  <br>
+                  <p><a class="twitter-follow-button" href="https://twitter.com/MadokaMagiNews" data-show-count="false">Follow @MadokaMagiNews</a></p>
+                  <script type="text/javascript">
+                    // <![CDATA[
+                    ! function(d, s, id) {
+                      var js, fjs = d.getElementsByTagName(s)[0],
+                        p = /^http:/.test(d.location) ? 'http' : 'https';
+                      if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + '://platform.twitter.com/widgets.js';
+                        fjs.parentNode.insertBefore(js, fjs);
+                      }
+                    }(document, 'script', 'twitter-wjs');
+                    // ]]>
+                  </script>
+                  <p><a class="twitter-timeline" href="https://twitter.com/MadokaMagiNews" data-widget-id="433439669036908544">Tweets by @MadokaMagiNews</a></p>
+                  <script type="text/javascript">
+                    // <![CDATA[
+                    ! function(d, s, id) {
+                      var js, fjs = d.getElementsByTagName(s)[0],
+                        p = /^http:/.test(d.location) ? 'http' : 'https';
+                      if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + "://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                      }
+                    }(document, "script", "twitter-wjs");
+                    // ]]>
+                  </script>
+                </center>
+              </div>
+              <hr class="drop">
+              <div class="col-md-6 content-title">
+                <h2>Vita Hill Social Club Boston</h2>
+                <a href="https://www.facebook.com/Vita-Hill-Social-Club-Boston-115472231907432/" title="Puella Magi Madoka Magica News" target="_blank">
+                  <small>Facebook Page <i class="fa fa-external-link"></i></small>
+                </a>
+                <p>For three months in the winter of 2012, I worked as a brand ambassador at a promotional pop-up for the PlayStation Vita. Since I knew the most about gaming than any other employee I took over the social media for the club. I promoted events
+                  and tournaments hosted by the club via Facebook and twitter. The club has long been closed but you can still view the old facebook page.</p>
+              </div>
+              <div class="col-md-6 mvid">
+                <img class="img-responsive pull-right" src="img/vitahill.jpg" alt="Vita Hill">
+
+              </div>
+              <div>
+                <center>
+                  <img class="img-responsive" src="img/vitafb.png" alt="Vita Hill">
+                </center>
+              </div>
+
+
+            </div>
+            <br>
+            <img class="center-block" src="img/msoon.png">
+            <h4><a class="page-scroll" href="#page-top">Back to top!</a></h4>
+
+          </div>
+
+        </div>
+
+      </div>
+      <!-- Footer -->
+      <footer class="text-center">
+        <div class="footer-above">
+          <div class="container">
+            <div class="row">
+              <div class="footer-col col-md-4 pager">
+                <h3 class="midcenter link"><a href="access.html" title="Accessibility Statement" accesskey="0" tabindex="1" alt="Accessibility Statement">accessibility statement</a></h3>
+              </div>
+              <div class="footer-col col-md-4">
+                <h3>Around the Web</h3>
+                <ul class="list-inline">
+                  <li>
+                    <a href="https://twitter.com/mimnetto" target="_blank" tabindex="0">
+                      <img src="img/twit.png" alt="Twitter" title="Twitter">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://mimnetto.tumblr.com/" target="_blank" tabindex="0">
+                      <img src="img/tumblr.png" alt="tumblr" title="tumblr">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/mimnetto" target="_blank" tabindex="0">
+                      <img src="img/gith.png" alt="github" title="github">
+                    </a>
+                  </li>
+                </ul>
+                <ul class="list-inline">
+                  <li>
+                    <a href="https://www.behance.net/mimnetto" title="Behance" target="_blank" tabindex="0">
+                      <img src="img/be.png" alt="Behance">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com/playlist?list=PLlhq4sNA9sGmFmMc-YHSxRnT7Nc0An4Du" target="_blank" tabindex="0">
+                      <img src="img/yout.png" alt="YouTube" title="YouTube">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://plus.google.com/102355379303079835472/posts" title="Google+" target="_blank" tabindex="0">
+                      <img src="img/gplus.png" alt="Google+">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-col col-md-4">
+                <h3>About This Site</h3>
+                <p>The Mockup for this site was made with Photoshop CC. Dreamweaver CC was used for the development process.</p>
+                <p>Primary Web Languages that were used are HTML, CSS and Javascipt. Bootstraps and jQuery were the frameworks and libaries used to assist the development of this site.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-below">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                Copyright &copy; Michelle Netto 2015
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /Footer -->
+      <!-- /.main-wrap -->
+</body>
+<script src="bootstrap/js/jquery.easing.min.js"></script>
+<script src="bootstrap/js/scrolling-nav.js"></script>
+<script src="lightbox/dist/js/lightbox.js"></script>
+<script>
+  lightbox.option({
+    'fitImagesInViewport': true,
+    'wrapAround': true
+  })
+</script>
+
+</html>
