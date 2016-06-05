@@ -10,7 +10,7 @@
   content: " ";
   width: 3px;
   background-color: #381a65;
-  left: 25px;
+  left: 30px;
   margin-right: -1.5px;
 }
 .timeline > li {
@@ -62,13 +62,13 @@
   right: auto;
   display: inline-block;
   border-top: 14px solid transparent;
-  border-right: 14px solid #d2ccd4;
+  border-right: 14px solid #f8f4c4;
   border-left: 0 solid #d2ccd4;
   border-bottom: 14px solid transparent;
   content: " ";
 }
 .timeline-panel {
-  background-color: #d2ccd4;
+  background-color: #f8f4c4;
 }
 .timeline > li > .timeline-badge {
   color: #fff;
@@ -195,6 +195,11 @@ h4.school{
   text-align: left;
 }
 
+h4.webP{
+	color:#45046B;
+  text-align: center;
+}
+
 h5.job{
   text-align: left;
 }
@@ -287,7 +292,7 @@ h5.job{
   margin-after: 0.50em;
   margin-start: 0;
   margin-end: 0;
-  color: #381a65;
+  color: #c40475;
   text-align: left;
   font-weight: bold;
   text-transform: uppercase;
@@ -386,12 +391,12 @@ h5.job{
 .projects, .timeline-panel, .well a:link {
 	font-variant: small-caps;
 	font-weight:bold;
-    color: #6e47a3;
+    color: #0072ff;
 }
 .projects, .timeline-panel, .well a:visited {
 		font-variant: small-caps;
 	font-weight:bold;
-    color: #443266;
+    color: #00a497;
 }
 
 /* mouse over link */
@@ -429,11 +434,11 @@ h5.job{
   color: #fff;
   display: inline-block;
   margin-right: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   padding: 5px 5px 5px 25px;
   background: #6e47a3;
   position: relative;
-  font-size: 12px;
+  font-size: 14px;
 }
 .hobby:before {
   content: "\f004";

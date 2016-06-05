@@ -83,7 +83,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #0b52f3;
+    color: #6f01ff;
 }
 
 h1,
@@ -145,7 +145,7 @@ hr.star-well {
 
 hr.star-well:after {
     color: #f6ff00;
-    background-color: #ecf0f1;
+    background-color: #f1dff9;
 }
 
 .img-centered {
@@ -431,7 +431,6 @@ footer h3 {
 footer .footer-above {
     padding-top: 50px;
   background-image: url(img/starbg02.png);
-  background-repeat: no-repeat;
 }
 
 footer .footer-col {
