@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # [Start Bootstrap](http://startbootstrap.com/) - This portfolio used the template [Freelancer](http://startbootstrap.com/template-overviews/freelancer/)
 
 [Freelancer](http://startbootstrap.com/template-overviews/freelancer/) is a one page freelancer portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, and a working PHP contact form.
@@ -8,3 +9,7 @@ Primary Web Languages that were used are HTML, CSS and Javascipt. Bootstraps and
 
 [Start Bootstrap](http://startbootstrap.com/) - This portfolio used the template [Freelancer](http://startbootstrap.com/template-overviews/freelancer/)
 >>>>>>> 785edf17d1a3420b36308711c4fe4f5784374526
+=======
+# colorful_galaxy
+My New Portfolio
+>>>>>>> 797942db06b82dd066f247f46f644d3640c39405
